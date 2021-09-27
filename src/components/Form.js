@@ -2,17 +2,13 @@ import { useState } from 'react';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
-import { CountryDropdown, RegionDropdown, CountryRegionData } from 'react-country-region-selector';
-import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
-import Typography from '@mui/material/Typography';
 
 
 export default function Form() {
     // const [formValues, setFormValues] = useState(defaultValues);
     const [postcode, setPostcode] = useState(null);
     const [hum, setHum] = useState(null);
-    const [country, setCountry] = useState(null);
 
     const handleSubmit = (event) => {
         event.preventDefault();
