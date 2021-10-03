@@ -51,6 +51,7 @@ export default function Form() {
                             accept=".mp3"
                             onChange={(e) => setHum(e.target.files[0])}
                             hidden
+                            capture="user"
                         />
                     </Button>
                     <FormHelperText id="component-helper-text">
