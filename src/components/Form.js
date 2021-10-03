@@ -48,10 +48,10 @@ export default function Form() {
                         Upload Hum
                         <input
                             type="file"
-                            accept=".mp3"
+                            accept="audio/.mp3"
                             onChange={(e) => setHum(e.target.files[0])}
                             hidden
-                            capture="user"
+                            capture
                         />
                     </Button>
                     <FormHelperText id="component-helper-text">
