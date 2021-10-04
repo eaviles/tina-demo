@@ -9,16 +9,12 @@ import {
   ThemeProvider,
 } from '@mui/material/styles';
 
-import { Tube } from '@react-three/drei'
 
 import Info from './components/Info';
 import Noodle from './components/Noodle';
 import Country from './components/Country';
 import Loader from './components/Loader';
-import Audio from './components/Audio';
-import Wire from './components/Wire';
 
-import mp3 from './a.mp3'
 
 let theme = createTheme({
   palette: {
