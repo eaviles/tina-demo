@@ -8,11 +8,9 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Slide from '@mui/material/Slide';
 import Container from '@mui/material/Container';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
 import Grid from '@mui/material/Grid';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 import Form from './Form';
 import About from './About';
@@ -30,6 +28,8 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 export default function Info() {
     const [open, setOpen] = React.useState(false);
     const [form, setForm] = React.useState(false);
+    const theme = useTheme();
+    const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -91,20 +91,13 @@ export default function Info() {
                                 Upload Your Hum
                             </Button>
                         </Grid>
-                        <Dialog open={form} onClose={handleFormClose}>
-                            <DialogTitle>Upload Hum</DialogTitle>
-                            <DialogContent>
-                                <DialogContentText>
-                                    Upload your hum using the form below
-                                </DialogContentText>
-                                <Form />
-                            </DialogContent>
-                            <DialogActions>
-                                <Button onClick={handleFormClose}>Cancel</Button>
-                                <Button onClick={handleFormClose}>Upload</Button>
-                            </DialogActions>
+                        <Dialog 
+                        open={form} 
+                        onClose={handleFormClose}
+                        fullScreen={fullScreen}
+                        >
+                            <Form handleFormClose={handleFormClose}/>
                         </Dialog>
-                        {/* <Form /> */}
                     </Grid>
                 </Container>
             </Dialog>

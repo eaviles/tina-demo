@@ -23,7 +23,7 @@ export default function About() {
             <Grid container item xs={12}>
                 <Typography
                     variant="body1">
-                    The hum is a gentle, musically democratic and direct way to interact with both human and the more-than-human. Hums are utterances found in the voice of humans, machines, and non-human species, as well as sonic artefacts found within the botanical world, and planetary rotation. It is an utterance that challenges the logical isolation of the English language – it is pre-speech, subterranean, pre-linguistic, pre-enunciative and within it exists pure potential. It acts as a conduit between sound relationships that connect the human experience to sounds found outside of it. Creating a living, resonating web, this work will communicate a sonic experience of location and connectedness for participants.
+                    The hum is a gentle, musically democratic and direct way to interact with both human and the more-than-human. Hums are utterances found in the voice of humans, machines, and non-human species, as well as sonic artefacts found within the botanical world, and planetary rotation. It is an utterance that challenges the logical isolation of the English language – it is pre-speech, subterranean, pre-linguistic, pre-enunciative and within it exists pure potential. It acts as a conduit between sound relationships that connect the human experience to sounds found outside of it. Creating a living, resonating texture, this work will communicate a sonic experience of location and connectedness for participants.
                 </Typography>
             </Grid>
             <Grid container item xs={12}>
