@@ -83,21 +83,11 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div style={rootStyle}>
-        {/* {canvas} */}
+        {canvas}
         {loading && <Loader />}
         {/* <Audio /> */}
         <Info />
-        {/* <Country country={country} handleCountryClose={handleCountryClose} /> */}
-        <Canvas>
-          {/* <ambientLight /> */}
-          {/* <pointLight position={[10, 10, 10]} /> */}
-          <mesh>
-            {/* <boxGeometry /> */}
-            <Tube>
-            <meshStandardMaterial />
-            </Tube>
-          </mesh>
-        </Canvas>
+        <Country country={country} handleCountryClose={handleCountryClose} />
       </div>
     </ThemeProvider>
   );
