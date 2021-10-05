@@ -53,7 +53,7 @@ export default function Form(props) {
         //         .then(response => response.text())
         //         .then(result => console.log(result))
         //         .catch(error => console.log('error', error));
-
+        props.setUploaded(true);
         props.handleFormClose()
     }
 

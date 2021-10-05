@@ -11,6 +11,7 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
 
 import Form from './Form';
 import About from './About';
@@ -28,6 +29,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 export default function Info() {
     const [open, setOpen] = React.useState(false);
     const [form, setForm] = React.useState(false);
+    const [uploaded, setUploaded] = React.useState(false);
     const theme = useTheme();
     const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
@@ -46,6 +48,17 @@ export default function Info() {
     const handleFormClose = () => {
         setForm(false);
     };
+
+    const uploadButton =
+        <Button
+            variant="outlined"
+            onClick={handleFormOpen}
+        >
+            Upload Your Hum
+        </Button>
+
+    const thanksMessage =
+        <Typography color="primary">Thank you for your hum!</Typography>
 
     return (
         <div>
@@ -84,19 +97,14 @@ export default function Info() {
                             <About />
                         </Grid>
                         <Grid container item xs={4} md={2}>
-                            <Button
-                                variant="outlined"
-                                onClick={handleFormOpen}
-                            >
-                                Upload Your Hum
-                            </Button>
+                            {uploaded ? thanksMessage : uploadButton}
                         </Grid>
-                        <Dialog 
-                        open={form} 
-                        onClose={handleFormClose}
-                        fullScreen={fullScreen}
+                        <Dialog
+                            open={form}
+                            onClose={handleFormClose}
+                            fullScreen={fullScreen}
                         >
-                            <Form handleFormClose={handleFormClose}/>
+                            <Form handleFormClose={handleFormClose} setUploaded={setUploaded} />
                         </Dialog>
                     </Grid>
                 </Container>
